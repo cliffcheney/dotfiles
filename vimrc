@@ -1,7 +1,13 @@
 set nocompatible              " be iMproved, required
-    filetype on
+filetype on
+syntax on
 
 set directory=~/.vim/swapfiles//
+
+filetype plugin indent on
+syntax on
+
+imap jj <Esc>
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -32,6 +38,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 "Minimap
 Plugin 'severin-lemaignan/vim-minimap'
+
+Plugin 'airblade/vim-gitgutter'
 
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
@@ -88,8 +96,6 @@ set t_Co=256
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-filetype plugin indent on
-colorscheme minimalist
-syntax enable
+set scl=yes
 
-imap jj <Esc>
+colorscheme minimalist
