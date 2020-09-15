@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible              
 filetype on
 syntax on
 
@@ -75,6 +75,8 @@ let g:syntastic_check_on_wq = 0
 " NerdTree auto on directory open
  autocmd StdinReadPre * let s:std_in=1
  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+" GitGutter settings
+let g:gitgutter_enabled = 1
 
 " NerdTree auto open on start without file
 " autocmd StdinReadPre * let s:std_in=1
