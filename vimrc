@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype on                  " required
+filetype off                  " required
 
 set directory=~/.vim/swapfiles//
 
@@ -63,6 +63,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set smd
+set t_Co=256
 
 syntax enable
 
