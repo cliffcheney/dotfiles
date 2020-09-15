@@ -11,6 +11,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+" vim color schemes
+Plugin 'rafi/awesome-vim-colorschemes'
 
 Plugin 'preservim/nerdtree'
 "New auto complete plugin
@@ -87,7 +89,7 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 filetype plugin indent on
-
+colorscheme minimalist
 syntax enable
 
 imap jj <Esc>
