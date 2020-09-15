@@ -1,3 +1,3 @@
-export PATH=/Users/nikonius/bin:$PATH
+export PATH=~/bin:$PATH
 
 set -o vi

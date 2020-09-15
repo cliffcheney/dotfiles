@@ -5,10 +5,9 @@
 	autocrlf = input
 	safecrlf = warn
 [alias]
-  co = checkout
-  ci = commit
+  co = commit
   st = status
-  br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
+  ad = add
+  pu = push
+  pl = pull
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
