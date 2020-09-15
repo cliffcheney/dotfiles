@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+    filetype off                  " required
 
 set directory=~/.vim/swapfiles//
 
@@ -67,6 +67,10 @@ set ignorecase
 set smartcase
 set smd
 set t_Co=256
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+filetype plugin indent on
 
 syntax enable
 
