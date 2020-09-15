@@ -90,4 +90,3 @@ filetype plugin indent on
 syntax enable
 
 imap jj <Esc>
-
