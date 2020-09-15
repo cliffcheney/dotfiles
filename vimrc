@@ -13,6 +13,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'preservim/nerdtree'
+"New auto complete plugin
+Plugin 'ajh17/VimCompletesMe'
 
 " Fuzzy File Finder
 " Plugin 'kien/ctrlp.vim'
