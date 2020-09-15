@@ -11,3 +11,5 @@
   pu = push
   pl = pull
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  get = git
+  got = git
