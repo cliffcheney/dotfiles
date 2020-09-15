@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-    filetype off                  " required
+    filetype on
 
 set directory=~/.vim/swapfiles//
 
@@ -31,6 +31,9 @@ Plugin 'vim-airline/vim-airline-themes'
 "Minimap
 Plugin 'severin-lemaignan/vim-minimap'
 
+" Syntastic
+Plugin 'vim-syntastic/syntastic'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,6 +59,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " NerdTree auto open on start without file
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" VimCompleteMe auto 
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
 set nu
 set relativenumber
@@ -75,3 +80,4 @@ filetype plugin indent on
 syntax enable
 
 imap jj <Esc>
+
