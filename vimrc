@@ -15,7 +15,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 
 " Fuzzy File Finder
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
+" Abandoned and replaced by
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Git Tool
 Plugin 'tpope/vim-fugitive'
@@ -23,7 +25,6 @@ Plugin 'tpope/vim-fugitive'
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
 
 "Minimap
 Plugin 'severin-lemaignan/vim-minimap'
