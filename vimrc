@@ -93,6 +93,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " VimCompleteMe auto 
 " autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
+" YouCompleteMe keybindings
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+
 set nu
 set relativenumber
 set ruler
