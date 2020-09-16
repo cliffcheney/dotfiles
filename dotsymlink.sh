@@ -24,3 +24,8 @@ done
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
   vim +PluginInstall +qall!
+
+  # if Macos then install alacritty service workflow
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        ln -s ~/dotfiles/openAlacritty.workflow ~/Library/Services/
+    fi

@@ -27,8 +27,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'rafi/awesome-vim-colorschemes'
 
 Plugin 'preservim/nerdtree'
-"New auto complete plugin
-Plugin 'ajh17/VimCompletesMe'
+
+" New auto complete plugin
+" Plugin 'ajh17/VimCompletesMe'
+Plugin 'ycm-core/YouCompleteMe'
 
 " Fuzzy File Finder
 " Plugin 'kien/ctrlp.vim'
@@ -89,7 +91,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " VimCompleteMe auto 
-autocmd FileType vim let b:vcm_tab_complete = 'vim'
+" autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
 set nu
 set relativenumber
