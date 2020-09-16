@@ -11,14 +11,18 @@ for t in ${array[@]}; do
 	ln -s dotfiles/$t .$t 
 done
 
+# link tmuxstart into bin
+    mkdir -p ~/bin
+    ln -s ~/dotfiles/tmuxstart.sh ~/bin/tmuxstart.sh
+
 # Remove vim bundles and then re-cole Vundle and then run Vundle plugininstall
 
-  mkdir -p ~/.vim/bundle/
-  mkdir ~/.vim/swapfiles/
-  rm -Rf ~/.vim/bundle/Vundle.vim
+    mkdir -p ~/.vim/bundle/
+    mkdir -p ~/.vim/swapfiles/
+    rm -Rf ~/.vim/bundle/Vundle.vim
 
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
   vim +PluginInstall +qall!
 
- 
+

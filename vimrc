@@ -9,6 +9,10 @@ syntax on
 
 imap jj <Esc>
 
+" set :bs to open :ls and :b for easier buffer navigation
+cnoremap <expr> bs (getcmdtype() == ':' && getcmdpos() == 1) ? "ls\<CR>:b" : "ls"
+noremap <leader>l :ls<cr>:b
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
