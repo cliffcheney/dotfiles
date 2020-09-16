@@ -13,6 +13,8 @@ imap jj <Esc>
 cnoremap <expr> bs (getcmdtype() == ':' && getcmdpos() == 1) ? "ls\<CR>:b" : "ls"
 noremap <leader>l :ls<cr>:b
 
+noremap <leader>m :MinimapToggle<cr>
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -83,8 +85,8 @@ let g:syntastic_check_on_wq = 0
 let g:gitgutter_enabled = 1
 
 " NerdTree auto open on start without file
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " VimCompleteMe auto 
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
