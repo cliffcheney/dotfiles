@@ -1,6 +1,12 @@
 [user]
-	name = Cliff Cheney
-	email = cliff@cliffcheney.com
+	<%- if (variables.gitUserEmail) { -%>
+		email = <%= variables.gitUserEmail %>
+	<%- } -%>
+	<%- if (variables.gitUserName) { -%>
+		name = <%= variables.gitUserName %>
+	<%- } -%>
+
+
 [core]
 	autocrlf = input
 	safecrlf = warn
@@ -16,3 +22,7 @@ hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+	
+# ignored by Git older than 1.7.10
+[include]
+	path = .gitconfig.local
