@@ -1,6 +1,6 @@
 # dotfiles
 
-I started my dotfile journey in September 2020. My dotfile philosophy is most influenced by (Greg Hurrell)[https://github.com/wincent/wincent] and [Nick Nisi](https://github.com/nicknisi/dotfiles)
+I started my dotfile journey in September 2020. My dotfile philosophy is most influenced by [Greg Hurrell](https://github.com/wincent/wincent) and [Nick Nisi](https://github.com/nicknisi/dotfiles)
 
 My dotfiles are focussed mostly on vim and tmux. 
 
