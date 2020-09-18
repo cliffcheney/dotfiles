@@ -1,11 +1,5 @@
-[user]
-	<%- if (variables.gitUserEmail) { -%>
-		email = <%= variables.gitUserEmail %>
-	<%- } -%>
-	<%- if (variables.gitUserName) { -%>
-		name = <%= variables.gitUserName %>
-	<%- } -%>
 
+[user]
 
 [core]
 	autocrlf = input
