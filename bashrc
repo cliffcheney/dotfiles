@@ -4,3 +4,4 @@ set -o vi
 
 alias ll='ls -la'
 alias tms='tmuxstart.sh'
+alias python=python3
