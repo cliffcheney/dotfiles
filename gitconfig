@@ -1,5 +1,7 @@
 
 [user]
+	email = nikonius@gmail.com
+	name = nikonius
 
 [core]
 	autocrlf = input
