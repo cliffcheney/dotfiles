@@ -29,8 +29,8 @@ Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'preservim/nerdtree'
 
 " New auto complete plugin
-" Plugin 'ajh17/VimCompletesMe'
-Plugin 'ycm-core/YouCompleteMe'
+Plugin 'ajh17/VimCompletesMe'
+" Plugin 'ycm-core/YouCompleteMe'
 
 " Fuzzy File Finder
 " Plugin 'kien/ctrlp.vim'
@@ -94,7 +94,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
 " YouCompleteMe keybindings
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+" let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
 set nu
 set relativenumber
