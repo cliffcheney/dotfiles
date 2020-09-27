@@ -8,6 +8,7 @@ filetype plugin indent on
 syntax on
 
 imap jj <Esc>
+let mapleader = " "
 
 " set :bs to open :ls and :b for easier buffer navigation
 cnoremap <expr> bs (getcmdtype() == ':' && getcmdpos() == 1) ? "ls\<CR>:b" : "ls"
@@ -36,14 +37,16 @@ Plugin 'ajh17/VimCompletesMe'
 " Plugin 'kien/ctrlp.vim'
 " Abandoned and replaced by
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 
 " Git Tool
 Plugin 'tpope/vim-fugitive'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Pugin 'vim-airline/vim-airline-themes'
 
+Plugin 'justinmk/vim-sneak'
 "Minimap
 Plugin 'severin-lemaignan/vim-minimap'
 
@@ -83,7 +86,8 @@ let g:syntastic_check_on_wq = 0
 " NerdTree auto on directory open
  autocmd StdinReadPre * let s:std_in=1
  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-" GitGutter settings
+
+ " GitGutter settings
 let g:gitgutter_enabled = 1
 
 " NerdTree auto open on start without file
@@ -91,10 +95,10 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " VimCompleteMe auto 
-" autocmd FileType vim let b:vcm_tab_complete = 'vim'
+autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
 " YouCompleteMe keybindings
-" let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
 set nu
 set relativenumber
