@@ -44,6 +44,8 @@ Plugin 'tpope/vim-fugitive'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
+
+"Sneak 
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'justinmk/vim-sneak'
@@ -99,6 +101,8 @@ autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
 " YouCompleteMe keybindings
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+" SNeak Keys
+let g:sneak#label = 1
 
 set nu
 set relativenumber
