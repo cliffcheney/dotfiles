@@ -1,6 +1,7 @@
 
 [user]
 	path = ~/.gitconfig.local
+	# This is not working
 
 [core]
 	autocrlf = input
