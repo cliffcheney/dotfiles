@@ -1,6 +1,5 @@
 
 [user]
-	path = ~/.gitconfig.local
 
 [core]
 	autocrlf = input
@@ -20,4 +19,3 @@ hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	
 # ignored by Git older than 1.7.10
 [include]
-	

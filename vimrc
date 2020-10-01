@@ -9,12 +9,14 @@ syntax on
 
 imap jj <Esc>
 let mapleader = " "
+" Reload vimrc 
+noremap confr :source ~/.vimrc<CR>
 
 " set :bs to open :ls and :b for easier buffer navigation
 cnoremap <expr> bs (getcmdtype() == ':' && getcmdpos() == 1) ? "ls\<CR>:b" : "ls"
 noremap <leader>l :ls<cr>:b
 
-noremap <leader>m :MinimapToggle<cr>
+" noremap <leader>m :MinimapToggle<cr>
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -36,7 +38,7 @@ Plugin 'ajh17/VimCompletesMe'
 " Fuzzy File Finder
 " Plugin 'kien/ctrlp.vim'
 " Abandoned and replaced by
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'junegunn/fzf.vim'
 
 " Git Tool
@@ -48,9 +50,9 @@ Plugin 'vim-airline/vim-airline'
 "Sneak 
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'justinmk/vim-sneak'
+" Plugin 'justinmk/vim-sneak'
 "Minimap
-Plugin 'severin-lemaignan/vim-minimap'
+" Plugin 'severin-lemaignan/vim-minimap'
 
 Plugin 'airblade/vim-gitgutter'
 
@@ -86,23 +88,24 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
                             
 " NerdTree auto on directory open
- autocmd StdinReadPre * let s:std_in=1
- autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
  " GitGutter settings
 let g:gitgutter_enabled = 1
 
 " NerdTree auto open on start without file
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+ autocmd StdinReadPre * let s:std_in=1
+ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " VimCompleteMe auto 
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
 " YouCompleteMe keybindings
-let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+" let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+
 " SNeak Keys
-let g:sneak#label = 1
+" let g:sneak#label = 1
 
 set nu
 set relativenumber
@@ -118,5 +121,6 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set scl=yes
+set hidden
 
 colorscheme minimalist
