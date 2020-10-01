@@ -63,7 +63,7 @@ Plugin 'vim-syntastic/syntastic'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -95,8 +95,8 @@ let g:syntastic_check_on_wq = 0
 let g:gitgutter_enabled = 1
 
 " NerdTree auto open on start without file
- autocmd StdinReadPre * let s:std_in=1
- autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " VimCompleteMe auto 
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
@@ -104,7 +104,7 @@ autocmd FileType vim let b:vcm_tab_complete = 'vim'
 " YouCompleteMe keybindings
 " let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
-" SNeak Keys
+" Sneak Keys
 " let g:sneak#label = 1
 
 set nu
