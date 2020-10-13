@@ -47,12 +47,6 @@ Plugin 'tpope/vim-fugitive'
 " Airline
 Plugin 'vim-airline/vim-airline'
 
-"Sneak 
-Plugin 'vim-airline/vim-airline-themes'
-
-" Plugin 'justinmk/vim-sneak'
-"Minimap
-" Plugin 'severin-lemaignan/vim-minimap'
 
 Plugin 'airblade/vim-gitgutter'
 
