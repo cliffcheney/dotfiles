@@ -33,13 +33,12 @@ Plugin 'preservim/nerdtree'
 
 " New auto complete plugin
 Plugin 'ajh17/VimCompletesMe'
-" Plugin 'ycm-core/YouCompleteMe'
 
 " Fuzzy File Finder
 " Plugin 'kien/ctrlp.vim'
 " Abandoned and replaced by
-" Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'junegunn/fzf.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'junegunn/fzf.vim'
 
 " Git Tool
 Plugin 'tpope/vim-fugitive'
@@ -82,8 +81,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
                             
 " NerdTree auto on directory open
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+ autocmd StdinReadPre * let s:std_in=1
+ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
  " GitGutter settings
 let g:gitgutter_enabled = 1
@@ -94,12 +93,6 @@ let g:gitgutter_enabled = 1
 
 " VimCompleteMe auto 
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
-
-" YouCompleteMe keybindings
-" let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
-
-" Sneak Keys
-" let g:sneak#label = 1
 
 set nu
 set relativenumber
