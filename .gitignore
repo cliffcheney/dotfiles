@@ -3,3 +3,5 @@
 config/PureRef.ini
 config/gtk-2.0
 config/Autodesk/
+config/lxterminal
+config/configstore
