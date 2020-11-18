@@ -6,8 +6,12 @@ alias ..='cd ..'
 alias c='clear'
 alias e='exit'
 alias v='vim'
-alias h='history'
+alias h='history | less'
 alias ht='htop'
 alias tm='tmux'
 alias tms='tmuxstart.sh'
 alias python=python3
+
+HISTSIZE=5000
+HISTFILESIZE=10000
+shopt -s histappend

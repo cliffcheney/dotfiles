@@ -1,1 +1,5 @@
-*config/Autodesk*
+#Git Ignore file
+
+config/PureRef.ini
+config/gtk-2.0
+config/Autodesk/
