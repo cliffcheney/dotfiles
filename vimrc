@@ -24,8 +24,9 @@ set history=200
 " colorscheme minimalist
 " colorscheme simple-dark
 " colorscheme meta5
-colorscheme hybrid
- 
+" colorscheme hybrid
+colorscheme darcula 
+
 imap jj <Esc>
 let mapleader = " "
 
