@@ -1,7 +1,7 @@
 
 [user]
-	path = ~/.gitconfig.local
-	# This is not working
+	name = Cliff Cheney
+	email = cliff@cliffcheney.com
 
 [core]
 	autocrlf = input
