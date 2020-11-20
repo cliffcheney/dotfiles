@@ -4,17 +4,40 @@ syntax on
 
 set directory=~/.vim/swapfiles//
 
-filetype plugin indent on
-syntax on
+set nu
+set relativenumber
+set ruler
+set cursorline
+set laststatus=2
+set hlsearch
+set ignorecase
+set smartcase
+set smd
+set t_Co=256
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set scl=yes
+set hidden
+set history=200
+
+" colorscheme minimalist
+colorscheme simple-dark
 
 imap jj <Esc>
 let mapleader = " "
 " Reload vimrc 
-noremap confr :source ~/.vimrc<CR>
+noremap cfr :source ~/.vimrc<CR>
 
-" set :bs to open :ls and :b for easier buffer navigation
-cnoremap <expr> bs (getcmdtype() == ':' && getcmdpos() == 1) ? "ls\<CR>:b" : "ls"
+"  :ls and :b for easier buffer navigation
 noremap <leader>l :ls<cr>:b
+
+" open command history with key
+map <C-h> q: 
+noremap <leader>h q:
+
+" clear last search
+noremap <leader>c :let @/ = ""<CR> 
 
 " noremap <leader>m :MinimapToggle<cr>
 
@@ -28,6 +51,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " vim color schemes
 Plugin 'rafi/awesome-vim-colorschemes'
+
+"colorizer hex colors
+Plugin 'chrisbra/Colorizer'
 
 Plugin 'preservim/nerdtree'
 
@@ -94,20 +120,3 @@ let g:gitgutter_enabled = 1
 " VimCompleteMe auto 
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
-set nu
-set relativenumber
-set ruler
-set cursorline
-set laststatus=2
-set hlsearch
-set ignorecase
-set smartcase
-set smd
-set t_Co=256
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set scl=yes
-set hidden
-
-colorscheme minimalist

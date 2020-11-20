@@ -16,9 +16,9 @@ done
     ln -s ~/dotfiles/tmuxstart.sh ~/bin/tmuxstart.sh
 
 # Remove vim bundles and then re-cole Vundle and then run Vundle plugininstall
-
     mkdir -p ~/.vim/bundle/
     mkdir -p ~/.vim/swapfiles/
+    ln -Fs ~/dotfiles/vim_colors ~/.vim/colors
     rm -Rf ~/.vim/bundle/Vundle.vim
 
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

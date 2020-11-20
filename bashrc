@@ -1,5 +1,6 @@
 export PATH=~/bin:$PATH
 
+alias a='alias'
 alias l='ls -l'
 alias ll='ls -la'
 alias ..='cd ..'
