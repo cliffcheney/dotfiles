@@ -22,15 +22,25 @@ set hidden
 set history=200
 
 " colorscheme minimalist
-colorscheme simple-dark
-
+" colorscheme simple-dark
+" colorscheme meta5
+colorscheme hybrid
+ 
 imap jj <Esc>
 let mapleader = " "
+
+" write using leader
+noremap <leader>w :w<CR>
+" noremap <leader>q :wqa<CR>
+
 " Reload vimrc 
 noremap cfr :source ~/.vimrc<CR>
 
 "  :ls and :b for easier buffer navigation
 noremap <leader>l :ls<cr>:b
+
+"load vimrc
+noremap <leader>v :source ~/.vimrc<CR>
 
 " open command history with key
 map <C-h> q: 
@@ -95,6 +105,7 @@ filetype plugin indent on    " required
 
 " NerdTree Toggle
 map <C-n> :NERDTreeToggle<CR>
+noremap <leader>n :NERDTreeToggle<CR>
 
 " Syntastic support
 set statusline+=%#warningmsg#
@@ -114,8 +125,8 @@ let g:syntastic_check_on_wq = 0
 let g:gitgutter_enabled = 1
 
 " NerdTree auto open on start without file
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+ autocmd StdinReadPre * let s:std_in=1
+ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " VimCompleteMe auto 
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
