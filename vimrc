@@ -21,11 +21,11 @@ set scl=yes
 set hidden
 set history=200
 
-" colorscheme minimalist
+colorscheme minimalist
 " colorscheme simple-dark
 " colorscheme meta5
 " colorscheme hybrid
-colorscheme darcula 
+" colorscheme darcula 
 
 imap jj <Esc>
 let mapleader = " "
@@ -139,5 +139,5 @@ autocmd FileType vim let b:vcm_tab_complete = 'vim'
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
-" leaser z as fold toggle
+" leader z as fold toggle
 noremap <leader>z za<CR>
