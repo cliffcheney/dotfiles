@@ -63,6 +63,9 @@ Plugin 'VundleVim/Vundle.vim'
 " vim color schemes
 Plugin 'rafi/awesome-vim-colorschemes'
 
+" XML plugin
+Plugin 'sukima/xmledit'
+
 "colorizer hex colors
 Plugin 'chrisbra/Colorizer'
 
@@ -132,3 +135,9 @@ let g:gitgutter_enabled = 1
 " VimCompleteMe auto 
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
 
+" xmledit auto folding
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+
+" leaser z as fold toggle
+noremap <leader>z za<CR>
