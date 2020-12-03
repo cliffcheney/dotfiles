@@ -21,7 +21,6 @@ set scl=yes
 set hidden
 set history=200
 
-colorscheme minimalist
 " colorscheme simple-dark
 " colorscheme meta5
 " colorscheme hybrid
@@ -141,3 +140,5 @@ au FileType xml setlocal foldmethod=syntax
 
 " leader z as fold toggle
 noremap <leader>z za<CR>
+
+colorscheme minimalist
