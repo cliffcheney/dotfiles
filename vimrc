@@ -20,11 +20,7 @@ set softtabstop=4
 set scl=yes
 set hidden
 set history=200
-
-" colorscheme simple-dark
-" colorscheme meta5
-" colorscheme hybrid
-" colorscheme darcula 
+set colorcolumn=80
 
 imap jj <Esc>
 let mapleader = " "
@@ -142,3 +138,7 @@ au FileType xml setlocal foldmethod=syntax
 noremap <leader>z za<CR>
 
 colorscheme minimalist
+" colorscheme simple-dark
+" colorscheme meta5
+" colorscheme hybrid
+" colorscheme darcula 
