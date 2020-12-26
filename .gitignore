@@ -8,4 +8,4 @@ config/configstore
 config/.DS_Store
 config/PureRef.ini
 config/gtk-2.0
-
+config/bashtop/error.log
