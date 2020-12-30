@@ -25,21 +25,22 @@ set colorcolumn=80
 imap jj <Esc>
 let mapleader = " "
 
-" write using leader
-noremap <leader>w :w<CR>
-" noremap <leader>q :wqa<CR>
-
-" Reload vimrc 
-noremap cfr :source ~/.vimrc<CR>
-
+" write using leader noremap <leader>w :w<CR> " noremap <leader>q :wqa<CR> " Reload vimrc noremap cfr :source ~/.vimrc<CR> 
 "  :ls and :b for easier buffer navigation
 noremap <leader>l :ls<cr>:b
 
 "load vimrc
 noremap <leader>v :source ~/.vimrc<CR>
 
+" better split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+unmap <C-H>
+nnoremap <C-H> <C-W><C-H>
+
 " open command history with key
-map <C-h> q: 
+" map <C-h> q: 
 noremap <leader>h q:
 
 " clear last search
