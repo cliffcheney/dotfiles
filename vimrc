@@ -25,8 +25,9 @@ set colorcolumn=80
 imap jj <Esc>
 let mapleader = " "
 
-" write using leader noremap <leader>w :w<CR> " noremap <leader>q :wqa<CR> " Reload vimrc noremap cfr :source ~/.vimrc<CR> 
-"  :ls and :b for easier buffer navigation
+" write using leader noremap <leader>w :w<CR> " noremap <leader>q :wqa<CR> " 
+" Reload vimrc noremap cfr :source ~/.vimrc<CR> 
+" :ls and :b for easier buffer navigation
 noremap <leader>l :ls<cr>:b
 
 "load vimrc

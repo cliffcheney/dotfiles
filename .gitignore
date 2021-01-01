@@ -9,3 +9,5 @@ config/.DS_Store
 config/PureRef.ini
 config/gtk-2.0
 config/bashtop/error.log
+config/vifm/scripts/
+config/vifm/vifminfo.json
