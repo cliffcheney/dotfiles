@@ -113,7 +113,7 @@ map <C-n> :NERDTreeToggle<CR>
 noremap <leader>n :NERDTreeToggle<CR>
 
 " COC Explorer 
-:nmap <space>e :CocCommand explorer<CR>
+nmap <space>e :CocCommand explorer<CR>
 
 " Syntastic support
 set statusline+=%#warningmsg#
