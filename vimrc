@@ -25,8 +25,10 @@ set colorcolumn=80
 imap jj <Esc>
 let mapleader = " "
 
-" write using leader noremap <leader>w :w<CR> " noremap <leader>q :wqa<CR> " 
+" write using leader noremap <leader>w :w<CR> 
+" noremap <leader>q :wqa<CR> " 
 " Reload vimrc noremap cfr :source ~/.vimrc<CR> 
+
 " :ls and :b for easier buffer navigation
 noremap <leader>l :ls<cr>:b
 
@@ -109,6 +111,9 @@ filetype plugin indent on    " required
 " NerdTree Toggle
 map <C-n> :NERDTreeToggle<CR>
 noremap <leader>n :NERDTreeToggle<CR>
+
+" COC Explorer 
+:nmap <space>e :CocCommand explorer<CR>
 
 " Syntastic support
 set statusline+=%#warningmsg#
