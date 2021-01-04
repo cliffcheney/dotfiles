@@ -46,6 +46,9 @@ Plugin 'rafi/awesome-vim-colorschemes'
 " XML plugin
 Plugin 'sukima/xmledit'
 
+" Float term
+Plugin 'voldikss/vim-floaterm'
+
 "colorizer hex colors
 Plugin 'chrisbra/Colorizer'
 
@@ -176,4 +179,6 @@ nmap <space>e :CocCommand explorer<CR>
 " leader z as fold toggle
 noremap <leader>z za<CR>
 
-
+" Floaterm bindigs
+nnoremap <leader>t :FloatermNew --autoclose=2 bash --init-file ~/.bashrc<CR>
+nnoremap <leader>lg :FloatermNew --autoclose=2 lazygit<CR>
