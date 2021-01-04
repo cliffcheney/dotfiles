@@ -14,3 +14,5 @@ config/vifm/vifminfo.json
 config/coc/
 config/coc/extensions/package.json
 config/nvim/.netrwhist
+
+config/coc/extensions/package.json

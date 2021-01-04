@@ -28,10 +28,12 @@ set nospell
 set spelllang=en_us
 set clipboard=unnamed
 set mouse=a
+set wildmode=longest,list,full
 
 imap jj <Esc>
 let mapleader = " "
 
+""""""""""""""""""""""""""""""""""""""""" Plugins with Vundle
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -82,7 +84,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-"SETTINGS LOADED AFTER PLUGINS
+"""""""""""""""""""""""""""""""""" SETTINGS LOADED AFTER PLUGINS
 
 "Colorscheme settins loaded after awesome
 " colorscheme minimalist
@@ -103,15 +105,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" NerdTree auto open on start without file
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " NerdTree auto on directory open autocmd StdinReadPre * let s:std_in=1
  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
  " GitGutter settings
 let g:gitgutter_enabled = 1
-
-" NerdTree auto open on start without file
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " xmledit auto folding
 let g:xml_syntax_folding=1
@@ -120,8 +122,7 @@ au FileType xml setlocal foldmethod=syntax
 " remove trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 
-" KEYBINDINGS LOADED AFTER PLUGINS
-
+"""""""""""""""""""""""""""""""""" KEYBINDINGS LOADED AFTER PLUGINS
 
 " Alias to replace all to Leader-S
 nnoremap <F6> :%s//gI<Left><Left><Left>
