@@ -151,9 +151,13 @@ nnoremap <leader>w :w<CR>
 
 " splits on Leader sh sv
 nnoremap <leader>sh :split<CR> <C-W><C-J>
+
 nnoremap <leader>sv :vsplit<CR> <C-W><C-L>
 
 nnoremap <leader>sc :close<CR>
+nnoremap <leader>so :only<CR>
+
+
 " open command history with key
 " map <C-h> q:
 noremap <leader>h q:
