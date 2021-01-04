@@ -179,5 +179,5 @@ noremap <leader>z za<CR>
 nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=shell bash --init-file ~/.bashrc<CR>
 nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=lazygit lazygit<CR>
 nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=nnn nnn<CR>
-tnoremap <silent> <F2> <C-\><C-n>:FloatermToggle!<CR>
 nnoremap <silent> <F1> :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=shell2 bash --init-file ~/.bashrc<CR>
+tnoremap <silent> <F2> <C-\><C-n>:FloatermToggle!<CR>
