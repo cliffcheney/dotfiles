@@ -1,10 +1,10 @@
-set nocompatible              
+set nocompatible
 filetype on
 syntax on
 
-set directory=~/.vim/swapfiles//
+set directory=~/.vim/swapfiles/
 
-set nu
+set number
 set relativenumber
 set ruler
 set cursorline
@@ -14,47 +14,27 @@ set ignorecase
 set smartcase
 set smd
 set t_Co=256
+set encoding=utf-8
+set termguicolors
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set scl=yes
 set hidden
 set history=200
-set colorcolumn=80
+set colorcolumn=100
+set timeoutlen=500
+set nospell
+set spelllang=en_us
+set clipboard=unnamed
+set mouse=a
 
 imap jj <Esc>
 let mapleader = " "
 
-" write using leader noremap <leader>w :w<CR> 
-" noremap <leader>q :wqa<CR> " 
-" Reload vimrc noremap cfr :source ~/.vimrc<CR> 
-
-" :ls and :b for easier buffer navigation
-noremap <leader>l :ls<cr>:b
-
-"load vimrc
-noremap <leader>v :source ~/.vimrc<CR>
-
-" better split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" open command history with key
-" map <C-h> q: 
-noremap <leader>h q:
-
-" clear last search
-noremap <leader>c :let @/ = ""<CR> 
-
-" noremap <leader>m :MinimapToggle<cr>
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -69,24 +49,17 @@ Plugin 'chrisbra/Colorizer'
 
 Plugin 'preservim/nerdtree'
 
+" which key for leader keys
+Plugin 'liuchengxu/vim-which-key'
+
 " COC Intelisense like completion
 Plugin 'neoclide/coc.nvim'
-
-" New auto complete plugin
-" Plugin 'ajh17/VimCompletesMe'
-
-" Fuzzy File Finder
-" Plugin 'kien/ctrlp.vim'
-" Abandoned and replaced by
-Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'junegunn/fzf.vim'
 
 " Git Tool
 Plugin 'tpope/vim-fugitive'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
-
 
 Plugin 'airblade/vim-gitgutter'
 
@@ -108,14 +81,19 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" NerdTree Toggle
-map <C-n> :NERDTreeToggle<CR>
-noremap <leader>n :NERDTreeToggle<CR>
 
-" COC Explorer 
-nmap <space>e :CocCommand explorer<CR>
+"SETTINGS LOADED AFTER PLUGINS
+
+"Colorscheme settins loaded after awesome
+" colorscheme minimalist
+" colorscheme simple-dark
+" colorscheme meta5
+" colorscheme hybrid
+colorscheme darcula
 
 " Syntastic support
+
+" Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -124,9 +102,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-                            
-" NerdTree auto on directory open
- autocmd StdinReadPre * let s:std_in=1
+
+" NerdTree auto on directory open autocmd StdinReadPre * let s:std_in=1
  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
  " GitGutter settings
@@ -136,18 +113,61 @@ let g:gitgutter_enabled = 1
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" VimCompleteMe auto 
-autocmd FileType vim let b:vcm_tab_complete = 'vim'
-
 " xmledit auto folding
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
+" remove trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+
+" KEYBINDINGS LOADED AFTER PLUGINS
+
+
+" Alias to replace all to Leader-S
+nnoremap <F6> :%s//gI<Left><Left><Left>
+
+" :ls and :b for easier buffer navigation
+noremap <leader>l :ls<cr>:b
+
+" attempt to load coc extensions with F keys
+noremap <F9> :CocInstall coc-explorer<CR>
+noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
+
+"load vimrc
+noremap <F5> :source ~/.vimrc<CR>
+
+" whichkey plugin
+nnoremap <F10> :WhichKey '<Space>'<CR>
+
+" better split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Alias write and quit to Leader
+nnoremap <leader>q :wq<CR>
+nnoremap <leader>w :w<CR>
+
+" splits on Leader sh sv
+nnoremap <leader>sh :split<CR> <C-W><C-J>
+nnoremap <leader>sv :vsplit<CR> <C-W><C-L>
+
+nnoremap <leader>sc :close<CR>
+" open command history with key
+" map <C-h> q:
+noremap <leader>h q:
+
+" clear last search highlight noremap <leader>c :let @/ = ""<CR>
+
+" NerdTree Toggle
+map <C-n> :NERDTreeToggle<CR>
+noremap <leader>n :NERDTreeToggle<CR>
+
+" COC Explorer
+nmap <space>e :CocCommand explorer<CR>
+
 " leader z as fold toggle
 noremap <leader>z za<CR>
 
-colorscheme minimalist
-" colorscheme simple-dark
-" colorscheme meta5
-" colorscheme hybrid
-" colorscheme darcula 
+
