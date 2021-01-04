@@ -23,7 +23,7 @@ set scl=yes
 set hidden
 set history=200
 set colorcolumn=100
-set timeoutlen=500
+set timeoutlen=700
 set nospell
 set spelllang=en_us
 set clipboard=unnamed
@@ -138,6 +138,7 @@ noremap <F5> :source ~/.vimrc<CR>
 
 " whichkey plugin
 nnoremap <F10> :WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " better split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -157,12 +158,12 @@ nnoremap <leader>sv :vsplit<CR> <C-W><C-L>
 nnoremap <leader>sc :close<CR>
 nnoremap <leader>so :only<CR>
 
-
 " open command history with key
 " map <C-h> q:
 noremap <leader>h q:
 
-" clear last search highlight noremap <leader>c :let @/ = ""<CR>
+" clear last search highlight
+noremap <leader>c :let @/ = ""<CR>
 
 " NerdTree Toggle
 map <C-n> :NERDTreeToggle<CR>
