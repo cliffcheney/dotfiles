@@ -134,7 +134,6 @@ nnoremap <F6> :%s//gI<Left><Left><Left>
 noremap <leader>l :ls<cr>:b
 
 " attempt to load coc extensions with F keys
-noremap <F9> :CocInstall coc-explorer<CR>
 noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
 
 "load vimrc
@@ -172,9 +171,6 @@ noremap <leader>c :let @/ = ""<CR>
 " NerdTree Toggle
 map <C-n> :NERDTreeToggle<CR>
 noremap <leader>n :NERDTreeToggle<CR>
-
-" COC Explorer
-nmap <space>e :CocCommand explorer<CR>
 
 " leader z as fold toggle
 noremap <leader>z za<CR>
