@@ -165,7 +165,7 @@ noremap <leader>h q:
 noremap <leader>c :let @/ = ""<CR>
 
 " NerdTree Toggle
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR> " moving to use ctrl for movement only
 noremap <leader>n :NERDTreeToggle<CR>
 
 " leader z as fold toggle
