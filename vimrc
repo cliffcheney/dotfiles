@@ -170,9 +170,13 @@ noremap <leader>n :NERDTreeToggle<CR>
 " leader z as fold toggle
 noremap <leader>z za<CR>
 
+" normal terminal
+nnoremap <leader>tn :sp<CR>:term<CR>
+nnoremap <leader>tlg :sp<CR>:term lazygit<CR>
+
 " Floaterm bindings
-nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8
-    \ --name=shell bash --init-file ~/.bashrc<CR>
+" nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8
+"     \ --name=shell bash --init-file ~/.bashrc<CR>
 nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8
     \ --name=lazygit lazygit<CR>
 nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=nnn nnn<CR>
