@@ -138,6 +138,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" split navigation for terminal mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-J> <C-\><C-n><C-W><C-J>
 tnoremap <C-K> <C-\><C-n><C-W><C-K>
