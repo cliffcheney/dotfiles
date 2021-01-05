@@ -127,21 +127,9 @@ autocmd BufWritePre * %s/\s\+$//e
 
 """""""""""""""""""""""""""""""""" KEYBINDINGS LOADED AFTER PLUGINS
 
-" Alias to replace all to Leader-S
-nnoremap <F6> :%s//gI<Left><Left><Left>
 
 " :ls and :b for easier buffer navigation
 noremap <leader>l :ls<cr>:b
-
-" attempt to load coc extensions with F keys
-noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
-
-"load vimrc
-noremap <F5> :source ~/.vimrc<CR>
-
-" whichkey plugin
-nnoremap <F10> :WhichKey '<Space>'<CR>
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " better split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -181,7 +169,7 @@ noremap <leader>n :NERDTreeToggle<CR>
 " leader z as fold toggle
 noremap <leader>z za<CR>
 
-" Floaterm bindigs
+" Floaterm bindings
 nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=shell bash --init-file ~/.bashrc<CR>
 nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=lazygit lazygit<CR>
 nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=nnn nnn<CR>
@@ -192,3 +180,20 @@ nnoremap <F3> :FloatermShow!<CR>
 tnoremap <F3> <C-\><C-n>:FloatermShow!<CR>
 nnoremap <F4> :FloatermNext<CR>
 tnoremap <F4> <C-\><C-n>:FloatermNext<CR>
+
+nnoremap <F6> :tabnew<CR>:term lazygit<CR>
+nnoremap <F7> <Esc>gt
+tnoremap <F7> <C-\><C-n>gt
+
+" Alias to replace all to Leader-S
+" nnoremap <F6> :%s//gI<Left><Left><Left>
+
+
+" attempt to load coc extensions with F keys
+noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
+
+"load vimrc
+noremap <F5> :source ~/.vimrc<CR>
+
+" whichkey plugin
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
