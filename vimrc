@@ -181,5 +181,8 @@ nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=l
 nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=nnn nnn<CR>
 nnoremap <F1> :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=shell2 bash --init-file ~/.bashrc<CR>
 nnoremap <F2> :FloatermHide<CR>
+tnoremap <F2> <C-\><C-n>:FloatermHide<CR>
 nnoremap <F3> :FloatermShow!<CR>
+tnoremap <F3> <C-\><C-n>:FloatermShow!<CR>
 nnoremap <F4> :FloatermNext<CR>
+tnoremap <F4> <C-\><C-n>:FloatermNext<CR>
