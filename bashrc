@@ -1,5 +1,7 @@
 export PATH=~/bin:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
 
+TERM=screen-256color
+
 alias a='alias'
 alias l='ls -l'
 alias ll='ls -la'
