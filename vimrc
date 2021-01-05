@@ -113,7 +113,8 @@ let g:syntastic_check_on_wq = 0
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " NerdTree auto on directory open autocmd StdinReadPre * let s:std_in=1
- autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") |
+    \ exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
  " GitGutter settings
 let g:gitgutter_enabled = 1
@@ -170,10 +171,13 @@ noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>z za<CR>
 
 " Floaterm bindings
-nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=shell bash --init-file ~/.bashrc<CR>
-nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=lazygit lazygit<CR>
+nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8
+    \ --name=shell bash --init-file ~/.bashrc<CR>
+nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8
+    \ --name=lazygit lazygit<CR>
 nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=nnn nnn<CR>
-nnoremap <F1> :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=shell2 bash --init-file ~/.bashrc<CR>
+nnoremap <F1> :FloatermNew --autoclose=2 --width=0.8 --height=0.8
+    \ --name=shell2 bash --init-file ~/.bashrc<CR>
 nnoremap <F2> :FloatermHide<CR>
 tnoremap <F2> <C-\><C-n>:FloatermHide<CR>
 nnoremap <F3> :FloatermShow!<CR>
