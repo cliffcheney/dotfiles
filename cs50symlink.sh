@@ -3,12 +3,12 @@
 # Script to make symlink into correct places. No deleting
 # Just brute ln -s in the hopes that errors won't kill it
 
-array=( 'bashrc' 'config' 'vimrc' )  
+array=( 'bashrc' 'config' 'gitconfig' 'vimrc' )
 
 for t in ${array[@]}; do
-	cd /home/ubuntu/ 
+	cd /home/ubuntu/
 	mv .$t .$t"_old"
-	ln -s workspace/dotfiles/$t .$t 
+	ln -s workspace/dotfiles/$t .$t
 done
 
 # Remove vim bundles and then re-cole Vundle and then run Vundle plugininstall
@@ -19,5 +19,5 @@ done
 
   git clone https://github.com/VundleVim/Vundle.vim.git /home/ubuntu/.vim/bundle/Vundle.vim
 
-  vim +PluginClean 
+  vim +PluginClean
   vim +PluginInstall +qall!
