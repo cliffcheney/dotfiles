@@ -147,7 +147,9 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+
+tnoremap <Esc> <C-\><C-n>
 
 " Alias write and quit to Leader
 nnoremap <leader>q :wq<CR>
