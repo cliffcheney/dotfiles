@@ -90,11 +90,11 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""" SETTINGS LOADED AFTER PLUGINS
 
 "Colorscheme settins loaded after awesome
-" colorscheme minimalist
+colorscheme minimalist
 " colorscheme simple-dark
 " colorscheme meta5
 " colorscheme hybrid
-colorscheme darcula
+" colorscheme darcula
 
 " Syntastic support
 
