@@ -22,7 +22,7 @@ set softtabstop=4
 set scl=yes
 set hidden
 set history=200
-set colorcolumn=100
+set colorcolumn=90
 set timeoutlen=700
 set nospell
 set spelllang=en_us
@@ -33,7 +33,7 @@ set wildmode=longest,list,full
 imap jj <Esc>
 let mapleader = " "
 
-""""""""""""""""""""""""""""""""""""""""" Plugins with Vundle
+"""""""""""""""""""""""""""""" Plugins with Vundle
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
