@@ -16,6 +16,7 @@ done
     mkdir -p /home/ubuntu/workspace/.vim/swapfiles/
     ln -s /home/ubuntu/workspace/.vim /home/ubuntu/.vim
     ln -Fs /home/ubuntu/dotfiles/vim_colors /home/ubuntu/.vim/colors
+    ln -s /home/ubuntu/workspace/.fzf /home/ubuntu/.fzf
     rm -Rf /home/ubuntu/.vim/bundle/Vundle.vim
 
   git clone https://github.com/VundleVim/Vundle.vim.git /home/ubuntu/.vim/bundle/Vundle.vim
@@ -27,4 +28,5 @@ sudo apt-get -y install software-properties-common
 sudo add-apt-repository ppa:lazygit-team/release
 
 sudo apt-get update
-sudo apt-get -y install lazygit htop fzf neovim
+sudo apt-get -y install lazygit htop neovim
+sudo /home/ubuntu/workspace/.fzf/install
