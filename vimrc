@@ -192,7 +192,7 @@ noremap q <Nop>
 " Tabbed terminals
 nnoremap <F2> :tabnew<CR>:term bash --init-file ~/.bashrc<CR>i
 nnoremap <F3> :tabnew<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
-" nnoremap <F4> :tabnew<CR>:term bash --init-file ~/.bashrc -c fzf<CR>i
+nnoremap <F4> :tabnew<CR>:Files<CR>
 
 " normal terminal
 nnoremap <leader>tn :sp<CR>:term bash --init-file ~/.bashrc<CR>i
