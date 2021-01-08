@@ -24,6 +24,9 @@ done
   vim +PluginInstall +qall!
 
 sudo apt-get update
+sleep 2
 sudo apt-get -y install software-properties-common
+sleep 2
 sudo add-apt-repository ppa:lazygit-team/release
+sleep 2
 sudo apt-get -y install lazygit htop fzf neovim
