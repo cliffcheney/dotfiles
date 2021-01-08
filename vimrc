@@ -1,3 +1,5 @@
+" vimrc for Cliff Cheney github.com/cliffcheney/dotfiles
+
 set nocompatible
 filetype on
 syntax on
