@@ -30,3 +30,5 @@ sudo add-apt-repository ppa:lazygit-team/release
 
 sudo apt-get update
 sudo apt-get -y install lazygit htop fzf neovim
+
+~/workspace/dotfiles/cs50start.sh
