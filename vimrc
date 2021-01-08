@@ -192,6 +192,7 @@ noremap q <Nop>
 " Tabbed terminals
 nnoremap <F2> :tabnew<CR>:term<CR>
 nnoremap <F3> :tabnew<CR>:term lazygit<CR>
+nnoremap <F4> :tabnew<CR>:term fzf<CR>
 
 " normal terminal
 nnoremap <leader>tn :sp<CR>:term<CR>
