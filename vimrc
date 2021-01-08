@@ -190,13 +190,13 @@ noremap Q q
 noremap q <Nop>
 
 " Tabbed terminals
-nnoremap <F2> :tabnew<CR>:term<CR>
-nnoremap <F3> :tabnew<CR>:term lazygit<CR>
-nnoremap <F4> :tabnew<CR>:term fzf<CR>
+nnoremap <F2> :tabnew<CR>:term bash --init-file ~/.bashrc<CR>i
+nnoremap <F3> :tabnew<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
+nnoremap <F4> :tabnew<CR>:term bash --init-file ~/.bashrc -c fzf<CR>i
 
 " normal terminal
-nnoremap <leader>tn :sp<CR>:term<CR>
-nnoremap <leader>tlg :sp<CR>:term lazygit<CR>
+nnoremap <leader>tn :sp<CR>:term bash --init-file ~/.bashrc<CR>i
+nnoremap <leader>tlg :sp<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
 
 "TAB in general mode will go to next buffer.
 nnoremap <TAB> :bnext<CR>
