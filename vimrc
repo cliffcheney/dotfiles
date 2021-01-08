@@ -23,7 +23,7 @@ set scl=yes
 set hidden
 set history=200
 set colorcolumn=90
-set timeoutlen=700
+set timeoutlen=400
 set nospell
 set spelllang=en_us
 set clipboard=unnamed
@@ -31,6 +31,7 @@ set mouse=a
 set wildmode=longest,list,full
 
 imap jj <Esc>
+imap jk <Esc>
 let mapleader = " "
 
 """""""""""""""""""""""""""""" Plugins with Vundle
@@ -43,9 +44,11 @@ Plugin 'VundleVim/Vundle.vim'
 " vim color schemes
 Plugin 'rafi/awesome-vim-colorschemes'
 
+Plugin 'chriskempson/base16-vim'
 " XML plugin
 Plugin 'sukima/xmledit'
-
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 " Float term
 Plugin 'voldikss/vim-floaterm'
 
@@ -70,6 +73,9 @@ Plugin 'airblade/vim-gitgutter'
 
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
+
+" Insert or delete brackets, parens, quotes in pair.
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,8 +102,6 @@ colorscheme minimalist
 " colorscheme hybrid
 " colorscheme darcula
 
-" Syntastic support
-
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -107,10 +111,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" NerdTree auto open on start without file
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " NerdTree auto on directory open autocmd StdinReadPre * let s:std_in=1
  autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") |
@@ -128,22 +128,27 @@ autocmd BufWritePre * %s/\s\+$//e
 
 """""""""""""""""""""""""""""""""" KEYBINDINGS LOADED AFTER PLUGINS
 
-
-" :ls and :b for easier buffer navigation
-noremap <leader>l :ls<cr>:b
-
 " better split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
 
 " split navigation for terminal mode
 tnoremap <Esc> <C-\><C-n>
-tnoremap <C-J> <C-\><C-n><C-W><C-J>
-tnoremap <C-K> <C-\><C-n><C-W><C-K>
-tnoremap <C-L> <C-\><C-n><C-W><C-L>
-tnoremap <C-H> <C-\><C-n><C-W><C-H>
+tnoremap <C-j> <C-\><C-n><C-W><C-J>
+tnoremap <C-k> <C-\><C-n><C-W><C-K>
+tnoremap <C-l> <C-\><C-n><C-W><C-L>
+tnoremap <C-h> <C-\><C-n><C-W><C-H>
+
+" Use Ctrl Shift arrows to adjust splits
+noremap <silent> <C-S-Left> :vertical resize +1<CR>
+noremap <silent> <C-S-Right> :vertical resize -1<CR>
+noremap <silent> <C-S-Up> :resize +1<CR>
+noremap <silent> <C-S-Down> :resize -1<CR>
+
+" :ls and :b for easier buffer navigation
+noremap <leader>l :ls<cr>:b
 
 " Alias write and quit to Leader
 nnoremap <leader>q :wq<CR>
@@ -158,45 +163,62 @@ nnoremap <leader>sc :close<CR>
 nnoremap <leader>so :only<CR>
 
 " open command history with key
-" map <C-h> q:
 noremap <leader>h q:
 
 " clear last search highlight
 noremap <leader>c :let @/ = ""<CR>
 
 " NerdTree Toggle
-" map <C-n> :NERDTreeToggle<CR> " moving to use ctrl for movement only
 noremap <leader>n :NERDTreeToggle<CR>
 
 " leader z as fold toggle
 noremap <leader>z za<CR>
 
+
+" better visual indent
+vnoremap < <gv
+vnoremap > >gv
+
+" I to i in Visual  mode for better commenting
+vnoremap i I
+
+" remap q to Q to prevent accidental macro
+noremap Q q
+noremap q <Nop>
+
+" Tabbed terminals
+nnoremap <F2> :tabnew<CR>:term<CR>
+nnoremap <F3> :tabnew<CR>:term lazygit<CR>
+
 " normal terminal
 nnoremap <leader>tn :sp<CR>:term<CR>
 nnoremap <leader>tlg :sp<CR>:term lazygit<CR>
 
+"TAB in general mode will go to next buffer.
+nnoremap <TAB> :bnext<CR>
+
+" ALT TAB will go to next tab
+noremap <M-TAB> <Esc>gt<CR>
+tnoremap <M-TAB> <Esc>gt<CR>
+
+" tab completion for autocomple
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
 " Floaterm bindings
 " nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8
 "     \ --name=shell bash --init-file ~/.bashrc<CR>
-nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8
-    \ --name=lazygit lazygit<CR>
-nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8 --name=nnn nnn<CR>
-nnoremap <F1> :FloatermNew --autoclose=2 --width=0.8 --height=0.8
-    \ --name=shell2 bash --init-file ~/.bashrc<CR>
-nnoremap <F2> :FloatermHide<CR>
-tnoremap <F2> <C-\><C-n>:FloatermHide<CR>
-nnoremap <F3> :FloatermShow!<CR>
-tnoremap <F3> <C-\><C-n>:FloatermShow!<CR>
-nnoremap <F4> :FloatermNext<CR>
-tnoremap <F4> <C-\><C-n>:FloatermNext<CR>
-
-nnoremap <F6> :tabnew<CR>:term lazygit<CR>
-nnoremap <F7> <Esc>gt
-tnoremap <F7> <C-\><C-n>gt
-
-" Alias to replace all to Leader-S
-" nnoremap <F6> :%s//gI<Left><Left><Left>
-
+"nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8
+"    \ --name=lazygit lazygit<CR>
+"nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8
+"    \ --name=nnn nnn<CR>
+"nnoremap <F1> :FloatermNew --autoclose=2 --width=0.8 --height=0.8
+"    \ --name=shell2 bash --init-file ~/.bashrc<CR>
+"nnoremap <F2> :FloatermHide<CR>
+"tnoremap <F2> <C-\><C-n>:FloatermHide<CR>
+"nnoremap <F3> :FloatermShow!<CR>
+"tnoremap <F3> <C-\><C-n>:FloatermShow!<CR>
+"nnoremap <F4> :FloatermNext<CR>
+"tnoremap <F4> <C-\><C-n>:FloatermNext<CR>
 
 " attempt to load coc extensions with F keys
 noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
