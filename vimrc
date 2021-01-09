@@ -25,7 +25,7 @@ set softtabstop=4
 set scl=yes
 set hidden
 set history=200
-set colorcolumn=90
+set colorcolumn=80
 set timeoutlen=400
 set nospell
 set spelllang=en_us
