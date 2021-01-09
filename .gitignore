@@ -19,3 +19,5 @@ config/coc/extensions/package.json
 config/coc/extensions/package.json
 
 cli50symlink.sh.save
+
+config/PureRef.ini
