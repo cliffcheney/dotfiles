@@ -129,7 +129,7 @@ au FileType xml setlocal foldmethod=syntax
 " remove trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 
-"""""""""""""""""""""""""""""""""" KEYBINDINGS LOADED AFTER PLUGINS
+"""""""""""""""" KEYBINDINGS LOADED AFTER PLUGINS
 
 " better split navigation
 nnoremap <C-j> <C-W><C-J>
@@ -200,6 +200,9 @@ nnoremap <leader>tlg :sp<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
 
 "TAB in general mode will go to next buffer.
 nnoremap <TAB> :bnext<CR>
+
+" set enter as next found item
+noremap <ENTER> n
 
 " ALT TAB will go to next tab
 noremap <M-TAB> <Esc>gt<CR>
