@@ -154,7 +154,7 @@ noremap <silent> <C-S-Down> :resize -1<CR>
 noremap <leader>l :ls<cr>:b
 
 " Alias write and quit to Leader
-nnoremap <leader>q :wq<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
 " splits on Leader sh sv
