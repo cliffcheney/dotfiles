@@ -25,7 +25,7 @@ done
 
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-  vim +PluginClean
+  vim +PluginClean +qall!
   vim +PluginInstall +qall!
 
   # if Macos then install alacritty service workflow
