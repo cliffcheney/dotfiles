@@ -130,8 +130,13 @@ au FileType xml setlocal foldmethod=syntax
 autocmd BufWritePre * %s/\s\+$//e
 
 """""""""""""""" KEYBINDINGS LOADED AFTER PLUGINS
+" move lines up or down with shift
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
 
-" better split navigation
+"""better split navigation
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
