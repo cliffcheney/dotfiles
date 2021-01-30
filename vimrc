@@ -1,12 +1,11 @@
 " vimrc for Cliff Cheney github.com/cliffcheney/dotfiles
 "
 
-set nocompatible
 filetype on
 syntax on
 
+set nocompatible
 set directory=~/.vim/swapfiles/
-
 set number
 set relativenumber
 set ruler
@@ -136,7 +135,7 @@ nnoremap J :m .+1<CR>==
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 
-"""better split navigation
+" better split navigation
 nnoremap <C-j> <C-W><C-J>
 nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
