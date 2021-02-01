@@ -1,11 +1,10 @@
 " vimrc for Cliff Cheney github.com/cliffcheney/dotfiles
 
-set nocompatible
 filetype on
 syntax on
 
+set nocompatible
 set directory=~/.vim/swapfiles/
-
 set number
 set relativenumber
 set ruler
@@ -129,6 +128,11 @@ au FileType xml setlocal foldmethod=syntax
 autocmd BufWritePre * %s/\s\+$//e
 
 """""""""""""""" KEYBINDINGS LOADED AFTER PLUGINS
+" move lines up or down with shift
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
 
 " better split navigation
 nnoremap <C-j> <C-W><C-J>

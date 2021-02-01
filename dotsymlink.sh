@@ -15,7 +15,7 @@ done
     mkdir -p ~/bin
     ln -s ~/dotfiles/tmuxstart.sh ~/bin/tmuxstart.sh
 
-# Remove vim bundles and then re-cole Vundle and then run Vundle plugininstall
+# Remove vim bundles and then reinstall Vundle and then run Vundle plugininstall
     mkdir -p ~/.vim/bundle/
     mkdir -p ~/.vim/swapfiles/
     rm ~/.vim/colors
@@ -25,7 +25,7 @@ done
 
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-  vim +PluginClean
+  vim +PluginClean +qall!
   vim +PluginInstall +qall!
 
   # if Macos then install alacritty service workflow
