@@ -180,7 +180,6 @@ noremap <leader>n :NERDTreeToggle<CR>
 " leader z as fold toggle
 noremap <leader>z za<CR>
 
-
 " better visual indent
 vnoremap < <gv
 vnoremap > >gv
