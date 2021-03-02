@@ -1,4 +1,4 @@
-export PATH=~/bin:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
+export PATH=~/bin:/opt/hombrew/bin/:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
 
 TERM=screen-256color
 
