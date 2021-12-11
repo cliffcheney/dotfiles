@@ -18,6 +18,7 @@ alias hg='history | grep --color=auto '
 alias pg='ps aux | grep --color=auto '
 alias fml='~/bin/fm-list.sh'
 alias ht='htop'
+alias zn='zenith'
 alias tm='tmux'
 alias tms='tmuxstart.sh'
 alias python=python3
