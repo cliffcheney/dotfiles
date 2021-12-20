@@ -1,4 +1,4 @@
-export PATH=~/bin:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
+export PATH=~/bin:/opt/hombrew/bin/:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
 
 TERM=screen-256color
 
@@ -18,6 +18,7 @@ alias hg='history | grep --color=auto '
 alias pg='ps aux | grep --color=auto '
 alias fml='~/bin/fm-list.sh'
 alias ht='htop'
+alias zn='zenith'
 alias tm='tmux'
 alias tms='tmuxstart.sh'
 alias python=python3
