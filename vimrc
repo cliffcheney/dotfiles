@@ -168,6 +168,10 @@ nnoremap <leader>sv :vsplit<CR> <C-W><C-L>
 nnoremap <leader>sc :close<CR>
 nnoremap <leader>so :only<CR>
 
+" scroll bind for diff comparisons
+nnoremap <leader>sb :set scrollbind<CR>
+nnoremap <leader>sn :set noscrollbind<CR>
+
 " open command history with key
 noremap <leader>h q:
 
