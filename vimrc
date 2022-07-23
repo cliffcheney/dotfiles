@@ -22,7 +22,7 @@ set shiftwidth=4
 set softtabstop=4
 set scl=yes
 set hidden
-set history=200
+set history=100
 set colorcolumn=80
 set timeoutlen=400
 set nospell
@@ -30,6 +30,7 @@ set spelllang=en_us
 set clipboard=unnamed
 set mouse=a
 set wildmode=longest,list,full
+set termbidi
 
 imap jj <Esc>
 imap jk <Esc>
@@ -54,7 +55,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'voldikss/vim-floaterm'
 
 "colorizer hex colors
-Plugin 'chrisbra/Colorizer'
+" Plugin 'chrisbra/Colorizer'
 
 Plugin 'preservim/nerdtree'
 
