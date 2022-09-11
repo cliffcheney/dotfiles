@@ -200,10 +200,16 @@ noremap q <Nop>
 nnoremap <F2> :tabnew<CR>:term bash --init-file ~/.bashrc<CR>i
 nnoremap <F3> :tabnew<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
 nnoremap <F4> :tabnew<CR>:Files<CR>
+"load vimrc
+noremap <F5> :source ~/.vimrc<CR>
+" attempt to load coc extensions with F keys
+noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
+nnoremap <F9> :%s//\r/g
 
 " normal terminal
-nnoremap <leader>tn :sp<CR>:term bash --init-file ~/.bashrc<CR>i
+nnoremap <leader>ts :sp<CR>:term bash --init-file ~/.bashrc<CR>i
 nnoremap <leader>tlg :sp<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
+nnoremap <leader>tn gt<CR>
 
 "TAB in general mode will go to next buffer.
 nnoremap <TAB> :bnext<CR>
@@ -233,12 +239,6 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "tnoremap <F3> <C-\><C-n>:FloatermShow!<CR>
 "nnoremap <F4> :FloatermNext<CR>
 "tnoremap <F4> <C-\><C-n>:FloatermNext<CR>
-
-" attempt to load coc extensions with F keys
-noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
-
-"load vimrc
-noremap <F5> :source ~/.vimrc<CR>
 
 " whichkey plugin
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
