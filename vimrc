@@ -154,13 +154,6 @@ noremap <silent> <C-S-Right> :vertical resize -1<CR>
 noremap <silent> <C-S-Up> :resize +1<CR>
 noremap <silent> <C-S-Down> :resize -1<CR>
 
-" :ls and :b for easier buffer navigation
-noremap <leader>l :ls<cr>:b
-
-" Alias write and quit to Leader
-nnoremap <leader>q :q<CR>
-nnoremap <leader>w :w<CR>
-
 " splits on Leader sh sv
 nnoremap <leader>sh :split<CR> <C-W><C-J>
 
@@ -168,6 +161,13 @@ nnoremap <leader>sv :vsplit<CR> <C-W><C-L>
 
 nnoremap <leader>sc :close<CR>
 nnoremap <leader>so :only<CR>
+
+" :ls and :b for easier buffer navigation
+noremap <leader>l :ls<cr>:b
+
+" Alias write and quit to Leader
+nnoremap <leader>q :q<CR>
+nnoremap <leader>w :w<CR>
 
 " scroll bind for diff comparisons
 nnoremap <leader>sb :set scrollbind<CR>
