@@ -148,14 +148,12 @@ tnoremap <C-k> <C-\><C-n><C-W><C-K>
 tnoremap <C-l> <C-\><C-n><C-W><C-L>
 tnoremap <C-h> <C-\><C-n><C-W><C-H>
 
-<<<<<<< HEAD
+"adjust split size with leader key
 nnoremap <silent> <leader>o :vertical resize +5<CR>
 nnoremap <silent> <leader>p :vertical resize -5<CR>
 nnoremap <silent> <leader>u :resize +5<CR>
 nnoremap <silent> <leader>i :resize -5<CR>
 
-=======
->>>>>>> 7d8d474ea749ea9c054b276ff2555cd4f420ae89
 " splits on Leader sh sv
 nnoremap <leader>sh :split<CR> <C-W><C-J>
 
