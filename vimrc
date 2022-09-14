@@ -149,17 +149,15 @@ tnoremap <C-l> <C-\><C-n><C-W><C-L>
 tnoremap <C-h> <C-\><C-n><C-W><C-H>
 
 " Use Ctrl Shift arrows to adjust splits
-noremap <silent> <C-S-Left> :vertical resize +1<CR>
-noremap <silent> <C-S-Right> :vertical resize -1<CR>
-noremap <silent> <C-S-Up> :resize +1<CR>
-noremap <silent> <C-S-Down> :resize -1<CR>
+"noremap <silent> <C-S-Left> :vertical resize +1<CR>
+"noremap <silent> <C-S-Right> :vertical resize -1<CR>
+"noremap <silent> <C-S-Up> :resize +1<CR>
+"noremap <silent> <C-S-Down> :resize -1<CR>
 
-" :ls and :b for easier buffer navigation
-noremap <leader>l :ls<cr>:b
-
-" Alias write and quit to Leader
-nnoremap <leader>q :q<CR>
-nnoremap <leader>w :w<CR>
+nnoremap <silent> <leader>o :vertical resize +5<CR>
+nnoremap <silent> <leader>p :vertical resize -5<CR>
+nnoremap <silent> <leader>u :resize +5<CR>
+nnoremap <silent> <leader>i :resize -5<CR>
 
 " splits on Leader sh sv
 nnoremap <leader>sh :split<CR> <C-W><C-J>
@@ -168,6 +166,13 @@ nnoremap <leader>sv :vsplit<CR> <C-W><C-L>
 
 nnoremap <leader>sc :close<CR>
 nnoremap <leader>so :only<CR>
+
+" :ls and :b for easier buffer navigation
+noremap <leader>l :ls<cr>:b
+
+" Alias write and quit to Leader
+nnoremap <leader>q :q<CR>
+nnoremap <leader>w :w<CR>
 
 " scroll bind for diff comparisons
 nnoremap <leader>sb :set scrollbind<CR>
@@ -205,7 +210,6 @@ noremap <F5> :source ~/.vimrc<CR>
 " attempt to load coc extensions with F keys
 noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
 nnoremap <F9> :%s//\r/g
-
 " normal terminal
 nnoremap <leader>ts :sp<CR>:term bash --init-file ~/.bashrc<CR>i
 nnoremap <leader>tlg :sp<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
