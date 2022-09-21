@@ -46,6 +46,7 @@ Plugin 'VundleVim/Vundle.vim'
 " vim color schemes
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
+
 " XML plugin
 Plugin 'sukima/xmledit'
 Plugin 'junegunn/fzf'
@@ -59,15 +60,16 @@ Plugin 'neoclide/coc.nvim'
 
 " Git Tool
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
 
-Plugin 'airblade/vim-gitgutter'
-
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
 
+" Primegagen game
+Plugin 'ThePrimeagen/vim-be-good'
 " Insert or delete brackets, parens, quotes in pair.
 " Plugin 'jiangmiao/auto-pairs'
 
@@ -89,12 +91,15 @@ filetype plugin indent on    " required
 
 """""""""""""""""""""""""""""""""" SETTINGS LOADED AFTER PLUGINS
 
-"Colorscheme settins loaded after awesome
-colorscheme minimalist
+" Colorscheme settins loaded after awesome
+" colorscheme minimalist
 " colorscheme simple-dark
-" colorscheme meta5
+ colorscheme meta5
 " colorscheme hybrid
 " colorscheme darcula
+" colorscheme spacecamp_lite
+" colorscheme nord
+" colorscheme materialbox
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -191,9 +196,14 @@ nnoremap <F3> :tabnew<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
 nnoremap <F4> :tabnew<CR>:Files<CR>
 "load vimrc
 noremap <F5> :source ~/.vimrc<CR>
+
+" colorsheme
+nnoremap <F6> :colorscheme
+
 " attempt to load coc extensions with F keys
 noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
 nnoremap <F9> :%s//\r/g
+
 " normal terminal
 nnoremap <leader>ts :sp<CR>:term bash --init-file ~/.bashrc<CR>i
 nnoremap <leader>tlg :sp<CR>:term bash --init-file ~/.bashrc -c lazygit<CR>i
@@ -208,9 +218,6 @@ noremap <ENTER> n
 " ALT TAB will go to next tab
 noremap <M-TAB> <Esc>gt<CR>
 tnoremap <M-TAB> <Esc>gt<CR>
-
-" tab completion for autocomple
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " whichkey plugin
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
