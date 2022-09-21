@@ -144,9 +144,7 @@ nnoremap <silent> <leader>i :resize -5<CR>
 
 " splits on Leader sh sv
 nnoremap <leader>sh :split<CR> <C-W><C-J>
-
 nnoremap <leader>sv :vsplit<CR> <C-W><C-L>
-
 nnoremap <leader>sc :close<CR>
 nnoremap <leader>so :only<CR>
 
@@ -169,6 +167,9 @@ noremap <leader>c :let @/ = ""<CR>
 
 "  added Explore leader key
 noremap <leader>e :vsplit<CR> :Explore<CR>
+
+"git gutter toggle
+noremap <leader>gg :GitGutterToggle<CR>
 
 " leader z as fold toggle
 noremap <leader>z za<CR>
