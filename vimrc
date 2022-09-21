@@ -72,6 +72,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'airblade/vim-gitgutter'
+"test
 
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
