@@ -57,7 +57,7 @@ Plugin 'voldikss/vim-floaterm'
 "colorizer hex colors
 " Plugin 'chrisbra/Colorizer'
 
-Plugin 'preservim/nerdtree'
+" Plugin 'preservim/nerdtree'
 
 " which key for leader keys
 Plugin 'liuchengxu/vim-which-key'
@@ -180,7 +180,9 @@ noremap <leader>h q:
 noremap <leader>c :let @/ = ""<CR>
 
 " NerdTree Toggle
-noremap <leader>n :NERDTreeToggle<CR>
+" noremap <leader>n :NERDTreeToggle<CR>
+"  added Explore leader key
+noremap <leader>e :vsplit<CR> :Explore<CR>
 
 " leader z as fold toggle
 noremap <leader>z za<CR>
