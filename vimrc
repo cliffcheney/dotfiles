@@ -45,17 +45,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " vim color schemes
 Plugin 'rafi/awesome-vim-colorschemes'
-
 Plugin 'chriskempson/base16-vim'
 " XML plugin
 Plugin 'sukima/xmledit'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-
-"colorizer hex colors
-" Plugin 'chrisbra/Colorizer'
-
-" Plugin 'preservim/nerdtree'
 
 " which key for leader keys
 Plugin 'liuchengxu/vim-which-key'
