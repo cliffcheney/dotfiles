@@ -16,7 +16,7 @@ set smartcase
 set smd
 set t_Co=256
 set encoding=utf-8
-" set termguicolors " Disabled for CS50
+set termguicolors " Disabled for CS50
 set expandtab
 set shiftwidth=4
 set softtabstop=4
