@@ -51,8 +51,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'sukima/xmledit'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
-" Float term
-Plugin 'voldikss/vim-floaterm'
 
 "colorizer hex colors
 " Plugin 'chrisbra/Colorizer'
@@ -72,7 +70,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'airblade/vim-gitgutter'
-"test
 
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
@@ -114,10 +111,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" NerdTree auto on directory open autocmd StdinReadPre * let s:std_in=1
- autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") |
-    \ exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
  " GitGutter settings
 let g:gitgutter_enabled = 1
@@ -180,8 +173,6 @@ noremap <leader>h q:
 " clear last search highlight
 noremap <leader>c :let @/ = ""<CR>
 
-" NerdTree Toggle
-" noremap <leader>n :NERDTreeToggle<CR>
 "  added Explore leader key
 noremap <leader>e :vsplit<CR> :Explore<CR>
 
@@ -225,22 +216,6 @@ tnoremap <M-TAB> <Esc>gt<CR>
 
 " tab completion for autocomple
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" Floaterm bindings
-" nnoremap <leader>t :FloatermNew --autoclose=2 --width=0.8 --height=0.8
-"     \ --name=shell bash --init-file ~/.bashrc<CR>
-"nnoremap <leader>lg :FloatermNew --autoclose=2 --width=0.8 --height=0.8
-"    \ --name=lazygit lazygit<CR>
-"nnoremap <leader>nnn :FloatermNew --autoclose=2 --width=0.8 --height=0.8
-"    \ --name=nnn nnn<CR>
-"nnoremap <F1> :FloatermNew --autoclose=2 --width=0.8 --height=0.8
-"    \ --name=shell2 bash --init-file ~/.bashrc<CR>
-"nnoremap <F2> :FloatermHide<CR>
-"tnoremap <F2> <C-\><C-n>:FloatermHide<CR>
-"nnoremap <F3> :FloatermShow!<CR>
-"tnoremap <F3> <C-\><C-n>:FloatermShow!<CR>
-"nnoremap <F4> :FloatermNext<CR>
-"tnoremap <F4> <C-\><C-n>:FloatermNext<CR>
 
 " whichkey plugin
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
