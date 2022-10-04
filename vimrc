@@ -30,7 +30,7 @@ set history=100
 set timeoutlen=400
 set nospell
 set spelllang=en_us
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set mouse=a
 set wildmode=longest,list,full
 set termbidi
@@ -95,8 +95,8 @@ noremap Q q
 noremap q <Nop>
 
 "load vimrc
-" noremap <F5> :source ~/.vimrc<CR>
-noremap <F5> :source /workspaces/11088342/config/vimrc<CR>
+noremap <F5> :source ~/.vimrc<CR>
+" noremap <F5> :source /workspaces/11088342/config/vimrc<CR>
 
 "TAB in general mode will go to next buffer.
 nnoremap <TAB> :bnext<CR>
@@ -108,4 +108,5 @@ noremap <ENTER> n
 noremap <M-TAB> <Esc>gt<CR>
 tnoremap <M-TAB> <Esc>gt<CR>
 
-
+" quick find replace snippet
+nnoremap S :%s//g<Left><Left>
