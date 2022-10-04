@@ -202,7 +202,8 @@ nnoremap <F6> :colorscheme
 
 " attempt to load coc extensions with F keys
 noremap <F8> :CocInstall coc-json coc-css coc-html coc-prettier coc-tsserver
-nnoremap <F9> :%s//\r/g
+nnoremap <F9> :%s/
+/\r/g
 
 " normal terminal
 nnoremap <leader>ts :sp<CR>:term bash --init-file ~/.bashrc<CR>i
