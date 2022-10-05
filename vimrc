@@ -12,9 +12,9 @@ set number
 set relativenumber
 set guicursor=
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 " highlight CursorLine ctermbg=233 
-highlight CursorColumn ctermbg=232
+" highlight CursorColumn ctermbg=232
 set ruler
 set laststatus=2
 set hlsearch
