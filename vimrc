@@ -14,7 +14,7 @@ set guicursor=
 set cursorline
 " set cursorcolumn
 " highlight CursorLine ctermbg=233 
-" highlight CursorColumn ctermbg=232
+highlight CursorColumn ctermbg=234
 set ruler
 set laststatus=2
 set hlsearch
@@ -51,8 +51,6 @@ imap jj <Esc>
 imap jk <Esc>
 let mapleader = " "
 
-" colorschemes
-colorscheme delek
 
 " better split navigation
 nnoremap <C-j> <C-W><C-J>
@@ -148,8 +146,11 @@ Plug 'ThePrimeagen/vim-be-good'
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
+Plug 'KabbAmine/yowish.vim'	
 call plug#end()
+
+" colorschemes
+colorscheme meta5
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

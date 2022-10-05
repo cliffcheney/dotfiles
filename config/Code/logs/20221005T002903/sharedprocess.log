@@ -1,0 +1,4 @@
+[2022-10-05 00:29:13.797] [sharedprocess] [info] Starting worker process with pid 32173 (type: fileWatcher, window: 1).
+[2022-10-05 00:29:17.407] [sharedprocess] [warning] No ptyHost heartbeat after 6 seconds
+[2022-10-05 00:31:41.638] [sharedprocess] [info] Worker process with pid 32173 terminated normally (type: fileWatcher, window: 1).
+[2022-10-05 00:31:45.806] [sharedprocess] [info] Starting worker process with pid 33144 (type: fileWatcher, window: 1).
