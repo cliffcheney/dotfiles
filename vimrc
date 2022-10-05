@@ -6,15 +6,21 @@ filetype plugin on
 
 set nocompatible
 set path+=**
+set exrc
 set directory=~/.vim/swapfiles/
 set wildmenu
 set number
 set relativenumber
-set nocursorline
+set guicursor=
 set cursorline
+set cursorcolumn
+" highlight CursorLine ctermbg=233 
+highlight CursorColumn ctermbg=233
 set ruler
 set laststatus=2
 set hlsearch
+set incsearch
+set scrolloff=8
 set ignorecase
 set smartcase
 set showmatch
@@ -34,6 +40,7 @@ set spelllang=en_us
 set clipboard+=unnamedplus
 set mouse=a
 set wildmode=longest,list,full
+set signcolumn=yes
 
 " for arabic 
 set termbidi
@@ -49,10 +56,10 @@ let mapleader = " "
 " colorscheme delek
 
 " better split navigation
-" nnoremap <C-j> <C-W><C-J>
-" nnoremap <C-k> <C-W><C-K>
-" nnoremap <C-h> <C-W><C-H>
-" nnoremap <C-l> <C-W><C-L>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-h> <C-W><C-H>
+nnoremap <C-l> <C-W><C-L>
 
 " adjust split size with leader key
 nnoremap <silent> <leader>o :vertical resize +5<CR>
@@ -81,9 +88,6 @@ noremap <leader>h q:
 
 " clear last search highlight
 noremap <leader>c :let @/ = ""<CR>
-
-" leader z as fold toggle
-noremap <leader>z za<CR>
 
 " move lines up or down with shift
 nnoremap K :m .-2<CR>==
@@ -115,3 +119,9 @@ tnoremap <M-TAB> <Esc>gt<CR>
 
 " quick find replace snippet
 nnoremap S :%s//g<Left><Left>
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
