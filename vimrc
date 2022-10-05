@@ -17,6 +17,7 @@ set laststatus=2
 set hlsearch
 set ignorecase
 set smartcase
+set showmatch
 set smd
 set t_Co=256
 set encoding=utf-8
@@ -33,6 +34,8 @@ set spelllang=en_us
 set clipboard+=unnamedplus
 set mouse=a
 set wildmode=longest,list,full
+
+" for arabic 
 set termbidi
 
 " set tree listing at netrw default
@@ -46,12 +49,12 @@ let mapleader = " "
 " colorscheme delek
 
 " better split navigation
-nnoremap <C-j> <C-W><C-J>
-nnoremap <C-k> <C-W><C-K>
-nnoremap <C-h> <C-W><C-H>
-nnoremap <C-l> <C-W><C-L>
+" nnoremap <C-j> <C-W><C-J>
+" nnoremap <C-k> <C-W><C-K>
+" nnoremap <C-h> <C-W><C-H>
+" nnoremap <C-l> <C-W><C-L>
 
-"adjust split size with leader key
+" adjust split size with leader key
 nnoremap <silent> <leader>o :vertical resize +5<CR>
 nnoremap <silent> <leader>p :vertical resize -5<CR>
 nnoremap <silent> <leader>u :resize +5<CR>
@@ -64,12 +67,14 @@ noremap <leader>l :ls<cr>:b
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
-"open netrw in split
+" open netrw in split
 noremap <leader>e :vsplit<CR> :Explore<CR>  
 
 " scroll bind for diff comparisons
-nnoremap <leader>sb :set scrollbind<CR>
-nnoremap <leader>sn :set noscrollbind<CR>
+" nnoremap <leader>sb :set scrollbind<CR>
+" nnoremap <leader>sn :set noscrollbind<CR>
+nnoremap <leader>s :set scrollbind<CR>
+nnoremap <leader>S :set noscrollbind<CR>
 
 " open command history with key
 noremap <leader>h q:
@@ -94,11 +99,11 @@ vnoremap > >gv
 noremap Q q
 noremap q <Nop>
 
-"load vimrc
+" load vimrc
 noremap <F5> :source ~/.vimrc<CR>
 " noremap <F5> :source /workspaces/11088342/config/vimrc<CR>
 
-"TAB in general mode will go to next buffer.
+" TAB in general mode will go to next buffer.
 nnoremap <TAB> :bnext<CR>
 
 " set enter as next found item
