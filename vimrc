@@ -1,5 +1,4 @@
-" vimrc by Cliff Cheney
-" aiming for no plugins
+" vmrc by Cliff Cheney
 
 syntax enable
 filetype plugin on
@@ -104,7 +103,7 @@ noremap Q q
 noremap q <Nop>
 
 " load vimrc
-noremap <F5> :source ~/.vimrc<CR>
+noremap <F5>:source ~/.vimrc<CR>
 " noremap <F5> :source /workspaces/11088342/config/vimrc<CR>
 
 " TAB in general mode will go to next buffer.
@@ -123,5 +122,39 @@ nnoremap S :%s//g<Left><Left>
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+" vim color schemes
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+
+" XML plugin
+Plug 'sukima/xmledit'
+
+" which key for leader keys
+Plug 'liuchengxu/vim-which-key'
+
+" Git Tool
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Airline
+Plug 'vim-airline/vim-airline'
+
+" Syntastic
+Plug 'vim-syntastic/syntastic'
+
+" Primegagen game
+Plug 'ThePrimeagen/vim-be-good'
+
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
