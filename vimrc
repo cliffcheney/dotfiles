@@ -14,7 +14,7 @@ set guicursor=
 set cursorline
 set cursorcolumn
 " highlight CursorLine ctermbg=233 
-highlight CursorColumn ctermbg=233
+highlight CursorColumn ctermbg=232
 set ruler
 set laststatus=2
 set hlsearch
@@ -52,7 +52,7 @@ imap jk <Esc>
 let mapleader = " "
 
 " colorschemes
-" colorscheme delek
+colorscheme delek
 
 " better split navigation
 nnoremap <C-j> <C-W><C-J>
