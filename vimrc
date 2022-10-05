@@ -1,4 +1,4 @@
-" vmrc by Cliff Cheney
+" vimrc by Cliff Cheney
 
 syntax enable
 filetype plugin on
@@ -11,10 +11,10 @@ set wildmenu
 set number
 set relativenumber
 set guicursor=
-set cursorline
+" set cursorline
 " set cursorcolumn
 " highlight CursorLine ctermbg=233 
-highlight CursorColumn ctermbg=234
+" highlight CursorColumn ctermbg=234
 set ruler
 set laststatus=2
 set hlsearch
