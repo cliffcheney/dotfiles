@@ -19,6 +19,8 @@ set ruler
 set laststatus=2
 set hlsearch
 set incsearch
+set complete+=kspell
+set completeopt=menuone,longest,preview
 set scrolloff=8
 set ignorecase
 set smartcase
@@ -113,7 +115,7 @@ noremap <ENTER> n
 " ALT TAB will go to next tab
 noremap <M-TAB> <Esc>gt<CR>
 tnoremap <M-TAB> <Esc>gt<CR>
-
+ 
 " quick find replace snippet
 nnoremap S :%s//g<Left><Left>
 
@@ -123,6 +125,9 @@ Plug 'tpope/vim-fugitive'
 " vim color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'chriskempson/base16-vim'
+
+" auto pop-up complete built-in autocomplete
+Plug 'vim-scripts/AutoComplPop'
 
 " XML plugin
 Plug 'sukima/xmledit'
@@ -148,6 +153,15 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'KabbAmine/yowish.vim'	
 call plug#end()
+
+" keybindings to help AutoComplPop
+inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
+inoremap <expr> <Right> pumvisible() ? "<C-y>" :"<Right>"
+
+inoremap <expr> <Left> pumvisible() ? "<C-e>" :"<Left>"
+
+inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
+inoremap <expr> <Up> pumvisible() ? "<C-p>":"<Up>"
 
 " colorschemes
 colorscheme meta5
