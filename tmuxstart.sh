@@ -12,7 +12,8 @@ tmux new-session -d -s dot -n vim -x $(tput cols) -y $(tput lines)
 tmux split-window -t dot:vim -h
 
 tmux send-keys -t dot:vim.left "nvim ." Enter
-tmux send-keys -t dot:vim.right "ls -la && echo -e '\n' && pwd && echo -e '\n' && git status" Enter
+## tmux send-keys -t dot:vim.right "ls -la && echo -e '\n' && pwd && echo -e '\n' && git status" Enter
+tmux send-keys -t dot:vim.right "git status" Enter
 tmux resize-pane -R 20 
 
 tmux split-window -t dot:vim -v "btop"

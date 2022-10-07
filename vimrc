@@ -164,7 +164,7 @@ inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
 inoremap <expr> <Up> pumvisible() ? "<C-p>":"<Up>"
 
 " colorschemes
-colorscheme meta5
+colorscheme gruvbox
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
