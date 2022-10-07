@@ -12,8 +12,8 @@ for t in ${array[@]}; do
 done
 # same for nvim dir in config; should refactor to handle nested dirs
 mv ~/.config/nvim ~/.config/nvim_old 
-ln -s ~/dotfiles/config/nvim ~/.config/nvim
+ln -fs ~/dotfiles/config/nvim ~/.config/nvim
 
 # link tmuxstart into bin
     mkdir -p ~/bin
-    ln -s ~/dotfiles/tmuxstart.sh ~/bin/tmuxstart.sh
+    ln -fs ~/dotfiles/tmuxstart.sh ~/bin/tmuxstart.sh
