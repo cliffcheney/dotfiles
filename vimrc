@@ -34,7 +34,7 @@ set softtabstop=4
 set scl=yes
 set hidden
 set history=100
-" set colorcolumn=100
+set colorcolumn=80
 set timeoutlen=400
 set nospell
 set spelllang=en_us
@@ -47,7 +47,8 @@ set signcolumn=yes
 set termbidi
 
 " set tree listing at netrw default
-let g:netrw_liststyle= 3
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 
 imap jj <Esc>
 imap jk <Esc>
@@ -61,10 +62,10 @@ nnoremap <C-h> <C-W><C-H>
 nnoremap <C-l> <C-W><C-L>
 
 " adjust split size with leader key
-nnoremap <silent> <leader>o :vertical resize +5<CR>
-nnoremap <silent> <leader>p :vertical resize -5<CR>
-nnoremap <silent> <leader>u :resize +5<CR>
-nnoremap <silent> <leader>i :resize -5<CR>
+nnoremap <silent> <leader>p :vertical resize +5<CR>
+nnoremap <silent> <leader>o :vertical resize -5<CR>
+nnoremap <silent> <leader>i :resize +5<CR>
+nnoremap <silent> <leader>u :resize -5<CR>
 
 " :ls and :b for easier buffer navigation
 noremap <leader>l :ls<cr>:b
@@ -103,7 +104,7 @@ noremap Q q
 noremap q <Nop>
 
 " load vimrc
-noremap <F5>:source ~/.vimrc<CR>
+nnoremap <F5>:source ~/.vimrc<CR>
 " noremap <F5> :source /workspaces/11088342/config/vimrc<CR>
 
 " TAB in general mode will go to next buffer.
@@ -122,8 +123,10 @@ nnoremap S :%s//g<Left><Left>
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'kdheepak/lazygit.nvim'
 " vim color schemes
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'folke/tokyonight.nvim'
 
 " auto pop-up complete built-in autocomplete
 Plug 'vim-scripts/AutoComplPop'
@@ -164,7 +167,7 @@ inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
 inoremap <expr> <Up> pumvisible() ? "<C-p>":"<Up>"
 
 " colorschemes
-colorscheme gruvbox
+colorscheme tokyonight-night
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
