@@ -25,6 +25,7 @@ alias ht='htop'
 alias bt='btop'
 alias zn='zenith'
 alias tm='tmux'
+alias tms='tmuxstart.sh'
 alias python=python3
 
 HISTSIZE=5000
