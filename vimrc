@@ -124,7 +124,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 " vim color schemes
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'chriskempson/base16-vim'
 
 " auto pop-up complete built-in autocomplete
 Plug 'vim-scripts/AutoComplPop'
@@ -151,6 +150,7 @@ Plug 'ThePrimeagen/vim-be-good'
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'KabbAmine/yowish.vim'	
 call plug#end()
 
