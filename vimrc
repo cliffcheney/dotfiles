@@ -11,7 +11,7 @@ set wildmenu
 set number
 set relativenumber
 set guicursor=
-" set cursorline
+set cursorline
 " set cursorcolumn
 " highlight CursorLine ctermbg=233 
 " highlight CursorColumn ctermbg=234
@@ -122,7 +122,6 @@ nnoremap S :%s//g<Left><Left>
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
 Plug 'kdheepak/lazygit.nvim'
 " vim color schemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -153,8 +152,6 @@ Plug 'ThePrimeagen/vim-be-good'
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'KabbAmine/yowish.vim'	
 call plug#end()
 
 " keybindings to help AutoComplPop
@@ -167,7 +164,7 @@ inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
 inoremap <expr> <Up> pumvisible() ? "<C-p>":"<Up>"
 
 " colorschemes
-colorscheme tokyonight-night
+" colorscheme tokyonight-night
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

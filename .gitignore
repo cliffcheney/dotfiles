@@ -25,3 +25,5 @@ config/oni2/store/global/store.json
 config/oni2/workspace/global/meta.json
 vim
 
+
+config/nvim/.netrwhist
