@@ -27,3 +27,4 @@ vim
 
 
 config/nvim/.netrwhist
+.vim/plugged/AutoComplPop

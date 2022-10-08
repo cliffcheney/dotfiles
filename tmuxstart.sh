@@ -19,4 +19,4 @@ tmux resize-pane -R 20
 tmux split-window -t dot:vim -v "btop"
 tmux resize-pane -D 10
 
-tmux attach -t dot:vim.right
+tmux attach -t dot:vim.left
