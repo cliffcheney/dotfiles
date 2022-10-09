@@ -54,7 +54,6 @@ imap jj <Esc>
 imap jk <Esc>
 let mapleader = " "
 
-
 " better split navigation
 " nnoremap <C-j> <C-W><C-J>
 " nnoremap <C-k> <C-W><C-K>

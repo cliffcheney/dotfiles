@@ -1,4 +1,4 @@
-export PATH=~/bin:/opt/hombrew/bin/:/usr/local/bin/:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
+export PATH=~/bin::/usr/local/bin/:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
 export EDITOR=/usr/bin/nvim
 
 TERM=screen-256color
