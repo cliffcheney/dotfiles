@@ -34,8 +34,8 @@ set softtabstop=4
 set scl=yes
 set hidden
 set history=100
-set colorcolumn=80
-set timeoutlen=400
+" set colorcolumn=80
+set timeoutlen=401
 set nospell
 set spelllang=en_us
 set clipboard+=unnamedplus
@@ -166,7 +166,7 @@ inoremap <expr> <Up> pumvisible() ? "<C-p>":"<Up>"
 inoremap <expr> <C-k> pumvisible() ? "<C-p>" :"<C-k>"
 
 " colorschemes
-" colorscheme tokyonight-night
+colorscheme tokyonight-night
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
