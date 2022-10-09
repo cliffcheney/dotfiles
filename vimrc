@@ -1,4 +1,4 @@
-" vimrc by Cliff Cheney
+
 
 syntax enable
 filetype plugin on
@@ -166,7 +166,8 @@ inoremap <expr> <Up> pumvisible() ? "<C-p>":"<Up>"
 inoremap <expr> <C-k> pumvisible() ? "<C-p>" :"<C-k>"
 
 " colorschemes
-colorscheme tokyonight-night
+" colorscheme tokyonight-night
+colorscheme elflord
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
