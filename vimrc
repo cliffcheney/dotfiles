@@ -56,8 +56,8 @@ let mapleader = " "
 
 
 " better split navigation
-nnoremap <C-j> <C-W><C-J>
-nnoremap <C-k> <C-W><C-K>
+" nnoremap <C-j> <C-W><C-J>
+" nnoremap <C-k> <C-W><C-K>
 nnoremap <C-h> <C-W><C-H>
 nnoremap <C-l> <C-W><C-L>
 
@@ -161,7 +161,9 @@ inoremap <expr> <Right> pumvisible() ? "<C-y>" :"<Right>"
 inoremap <expr> <Left> pumvisible() ? "<C-e>" :"<Left>"
 
 inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
+inoremap <expr> <C-j> pumvisible() ? "<C-n>" :"<C-j>"
 inoremap <expr> <Up> pumvisible() ? "<C-p>":"<Up>"
+inoremap <expr> <C-k> pumvisible() ? "<C-p>" :"<C-k>"
 
 " colorschemes
 " colorscheme tokyonight-night
