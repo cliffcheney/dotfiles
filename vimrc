@@ -1,4 +1,4 @@
-
+" Cliff Cheney vimrc
 
 syntax enable
 filetype plugin on
