@@ -151,6 +151,11 @@ Plug 'ThePrimeagen/vim-be-good'
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
+" markdown 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 " keybindings to help AutoComplPop
