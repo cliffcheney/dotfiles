@@ -11,6 +11,7 @@ for t in ${array[@]}; do
 	ln -s dotfiles/$t .$t
 done
 # same for nvim dir in config; should refactor to handle nested dirs
+rm -Rf ~/.config/nvim_old
 mv ~/.config/nvim ~/.config/nvim_old 
 ln -fs ~/dotfiles/config/nvim ~/.config/nvim
 
