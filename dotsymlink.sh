@@ -7,6 +7,7 @@ array=('bash_profile' 'bashrc' 'gitconfig' 'tmux.conf' 'vim' 'vimrc' 'zshrc')
 
 for t in ${array[@]}; do
 	cd ~/
+        rm -Rf .$t"_old"
 	mv .$t .$t"_old"
 	ln -s dotfiles/$t .$t
 done
