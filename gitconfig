@@ -1,7 +1,7 @@
 
 [user]
 	name = Cliff Cheney
-	email = cliff@cliffcheney.com
+	email = cliffcheney@users.noreply.github.com
 
 [core]
 	autocrlf = input
@@ -14,3 +14,8 @@
   pl = pull
 hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [include]
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

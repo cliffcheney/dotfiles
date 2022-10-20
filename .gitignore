@@ -1,7 +1,5 @@
 #Git Ignore file
 
-./config/.gitignore
-
 config/lazygit/state.yml
 
 config/PureRef.ini
@@ -11,4 +9,12 @@ config/oni2/configuration.json
 config/oni2/keybindings.json
 config/oni2/store/global/store.json
 config/oni2/workspace/global/meta.json
+
+vim/plugged/
+config/nvim/.netrwhist
+vim/swapfiles/
+
+config/nvim/plug/
+
+
 

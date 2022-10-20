@@ -119,7 +119,7 @@ tnoremap <M-TAB> <Esc>gt<CR>
 " quick find replace snippet
 nnoremap S :%s//g<Left><Left>
 
-call plug#begin('~/.config/nvim/autoload/')
+call plug#begin('~/.config/nvim/plug/')
 
 Plug 'kdheepak/lazygit.nvim'
 " vim color schemes
