@@ -1,7 +1,50 @@
-" Cliff Cheney vimrc
+" @cliffcheney vimrc
 
 syntax enable
 filetype plugin on
+
+" Plugins 
+call plug#begin('~/.config/nvim/plug/')
+
+Plug 'kdheepak/lazygit.nvim'
+
+" vim color schemes
+" Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'folke/tokyonight.nvim'
+
+" auto pop-up complete built-in autocomplete
+Plug 'vim-scripts/AutoComplPop'
+
+" XML plugin
+Plug 'sukima/xmledit'
+
+" which key for leader keys
+Plug 'liuchengxu/vim-which-key'
+
+" Git Tool
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+
+" Airline
+Plug 'vim-airline/vim-airline'
+
+" Syntastic
+Plug 'vim-syntastic/syntastic'
+
+" Primegagen game
+Plug 'ThePrimeagen/vim-be-good'
+
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" markdown 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+call plug#end()
 
 set nocompatible
 set path+=**
@@ -33,8 +76,8 @@ set shiftwidth=4
 set softtabstop=4
 set scl=yes
 set hidden
-set history=100
-" set colorcolumn=80
+
+set colorcolumn=80
 set timeoutlen=401
 set nospell
 set spelllang=en_us
@@ -119,42 +162,6 @@ tnoremap <M-TAB> <Esc>gt<CR>
 " quick find replace snippet
 nnoremap S :%s//g<Left><Left>
 
-call plug#begin('~/.config/nvim/plug/')
-
-Plug 'kdheepak/lazygit.nvim'
-" vim color schemes
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'folke/tokyonight.nvim'
-
-" auto pop-up complete built-in autocomplete
-Plug 'vim-scripts/AutoComplPop'
-
-" XML plugin
-Plug 'sukima/xmledit'
-
-" which key for leader keys
-Plug 'liuchengxu/vim-which-key'
-
-" Git Tool
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-" Airline
-Plug 'vim-airline/vim-airline'
-
-" Syntastic
-Plug 'vim-syntastic/syntastic'
-
-" Primegagen game
-Plug 'ThePrimeagen/vim-be-good'
-
-" Telescope
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
-" markdown 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-call plug#end()
 
 " keybindings to help AutoComplPop
 inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
@@ -169,7 +176,7 @@ inoremap <expr> <C-k> pumvisible() ? "<C-p>" :"<C-k>"
 
 " colorschemes
 " colorscheme tokyonight-night
-colorscheme elflord
+" colorscheme elflord
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
