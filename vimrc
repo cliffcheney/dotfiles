@@ -76,8 +76,7 @@ set shiftwidth=4
 set softtabstop=4
 set scl=yes
 set hidden
-
-set colorcolumn=80
+set colorcolumn=100
 set timeoutlen=401
 set nospell
 set spelllang=en_us
