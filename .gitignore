@@ -1,5 +1,5 @@
 #Git Ignore file
-
+*/.DS_Store
 config/lazygit/state.yml
 
 config/PureRef.ini
