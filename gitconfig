@@ -2,6 +2,7 @@
 [user]
 	name = cliffcheney
 	email = cliffcheney@users.noreply.github.com
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMTo2BjcEm04CFM0lNzSIbinqWa/pDeGo/SzbXc56MZeyv+c8BADTLANTfmSFEqjBhL/w07Qo0c0qzSk+p7za2uizd6v9wABbJqxeEf4UjdK6+yTNg/Q+BxjZci+U/WTU3H9GDbIfIoBd+AS1rB1xdnTbhE1UTHmIvBE17jqwsSSFLqncpqLK/W7xI89u+JxL5ESjUUHysGbbGG3mLBsCGf2kyItwtg7YTm7xDgEQpljIAJY0GG9YtDzgytorVAw/JohxSyihFUlkwIvQ9l6nptfvN79084Bt59g9iJ5JUyGNXoxTNHvXHEcIUtr8wGRmdQEMPzCfc9fvfCsb47AmawK97TM6TToj/onwmimyePOzUXAH3L7lTTE4X1vJebrIl7vv+DZk5RWI6igqTOeQbKAn5ck1nnCSAlWNK1FwRGBirUTUdbIkHgtuthvY2NwGHowTG2q7JynmX/outAGtmkMVGIkEjWIIuKtO0o3jFd9cRTsT9jpff7ERIWPo5O+s=
 
 [core]
 	autocrlf = input
@@ -19,3 +20,9 @@ hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
