@@ -16,5 +16,12 @@ vim/swapfiles/
 
 config/nvim/plug/
 
+config/Autodesk/FusionFabrication.FusionNesting
+
+config/btop/
 
 
+config/btop/btop.log
+config/gh/config.yml
+config/gh/hosts.yml
+config/internetarchive/ia.ini
