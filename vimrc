@@ -41,6 +41,9 @@ Plug 'ThePrimeagen/vim-be-good'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Obsidian plugin
+Plug 'epwalsh/obsidian.nvim'
+
 " markdown 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 

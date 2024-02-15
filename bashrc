@@ -1,5 +1,6 @@
 export PATH=~/bin::/usr/local/bin/:/usr/local/Cellar/ruby/3.0.0_1/bin/:$PATH
 export EDITOR=/usr/bin/nvim
+export PS1="\\w : \$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\$ "
 
 TERM=screen-256color
 
