@@ -20,14 +20,17 @@ return require('packer').startup(function(use)
 		  require("rose-pine").setup()
 		  vim.cmd('colorscheme rose-pine')
 	  end
-  }) 
-  use{	
+  })
+
+  use{
 	  'nvim-treesitter/nvim-treesitter',
-	  {run = ':TSUpdate'} 
+	  {run = ':TSUpdate'}
   }
+
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('airblade/vim-gitgutter')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -51,6 +54,29 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
   }
+  use({
+  "epwalsh/obsidian.nvim",
+  tag = "*",  -- recommended, use latest release instead of latest commit
+  requires = {
+    -- Required.
+    "nvim-lua/plenary.nvim",
+
+    -- see below for full list of optional dependencies 👇
+  },
+  config = function()
+    require("obsidian").setup({
+      workspaces = {
+        {
+          name = "work",
+          path = "/Users/cliffcheney/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian",
+        },
+      },
+
+      -- see below for full list of options 👇
+    })
+  end,
+})
+
   -- Lua
 use {
   "folke/which-key.nvim",

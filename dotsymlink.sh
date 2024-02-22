@@ -16,3 +16,5 @@ done
 # link tmuxstart into bin
     mkdir -p ~/bin
     ln -fs ~/dotfiles/tmuxstart.sh ~/bin/tmuxstart.sh
+
+    #this is a test line
