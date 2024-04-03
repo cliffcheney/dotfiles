@@ -29,5 +29,8 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
 
+-- set to 0 to stop weird auto reveal of hidden items. default 1.
+vim.opt.conceallevel = 0
+
 vim.g.mapleader = " "
 
