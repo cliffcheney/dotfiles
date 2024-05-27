@@ -31,3 +31,7 @@ alias python=python3
 HISTSIZE=5000
 HISTFILESIZE=10000
 shopt -s histappend
+
+alias zo='zoxide'
+alias z='cd'
+eval "$(zoxide init --cmd cd bash)"
